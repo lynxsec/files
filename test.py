@@ -38,3 +38,29 @@ query_results = client.get_query_results(
 # Print the results
 for result in query_results['results']:
     print(result)
+
+
+
+from IPython.display import display, HTML
+# Function to highlight the word "reflection" in the log messages
+def highlight_reflection(text, color='yellow'):
+    highlighted_text = text.replace("reflection", f"<span style='background-color: {color};'>reflection</span>")
+    return highlighted_text
+
+# Assume query_results['results'] contains the logs
+highlighted_results = []
+
+for result in query_results['results']:
+    # Assuming each result has a message field
+    message = result.get('@message', '')
+    # Highlight the word "reflection" in the message
+    highlighted_message = highlight_reflection(message)
+    # Add the timestamp for context (assuming result has a timestamp field)
+    timestamp = result.get('@timestamp', '')
+    highlighted_results.append(f"{timestamp}: {highlighted_message}")
+
+# Combine all highlighted results into a single HTML string
+html_results = "<br>".join(highlighted_results)
+
+# Display the results as HTML
+display(HTML(html_results))
