@@ -35,6 +35,15 @@ query_results = client.get_query_results(
     queryId=query_id
 )
 
+# Function to highlight text based on a regex pattern with specified background and text colors
+def highlight_regex(text, pattern, background_color='yellow', text_color='black'):
+    # Use re.sub() to replace the pattern matches with a highlighted version
+    highlighted_text = re.sub(pattern, lambda match: f"<span style='background-color: {background_color}; color: {text_color};'>{match.group(0)}</span>", text)
+    return highlighted_text
+
+# Example regex pattern to match the word "reflection" with case-insensitive matching
+pattern = r"reflection"
+
 # Print the results
 for result in query_results['results']:
     print(result)
