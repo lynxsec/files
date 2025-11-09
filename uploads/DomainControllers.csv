@@ -1,0 +1,4 @@
+"Domain","Site","Name","IPv4Address","Operating System","Hostname","Infra","Naming","Schema","RID","PDC","SMB Port Open","SMB1(NT LM 0.12)","SMB2(0x0202)","SMB2(0x0210)","SMB3(0x0300)","SMB3(0x0302)","SMB3(0x0311)","SMB Signing"
+"solomonedwards.com","iCore-Cloud","IADDC01","10.32.125.11","Windows Server 2016 Standard","IADDC01.solomonedwards.com","True","True","True","True","True","True","False","True","True","True","True","False","True"
+,,"HOUDC04","192.168.12.21",,"HOUDC04.solomonedwards.com",,,,,,"False",,,,,,,
+"solomonedwards.com","PA-KingOfPrussia","PHLDC05","192.168.1.10","Windows Server 2016 Standard","PHLDC05.solomonedwards.com","False","False","False","False","False","True","False","True","True","True","True","False","True"
